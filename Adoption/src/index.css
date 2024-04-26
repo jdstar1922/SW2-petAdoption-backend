@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100;200;300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400;1,500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  @apply box-border m-[0%] p-0;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  @apply min-h-screen 
+  bg-[#F6F4F3];
+}
+
+hr {
+  @apply border-[#86654B] border-2;
+}
+
+/*------------- NAVIGATION BAR -------------------*/
+.navbar {
+  @apply fixed 
+  w-full 
+  bg-transparent 
+  flex
+  justify-end  
+  items-end 
+  z-[100] 
+  px-[100px] 
+  py-5 
+  left-0 
+  top-0;
+}
+.logoA {
+  @apply text-[23px] 
+  text-[black] 
+  no-underline 
+  font-bold
+  justify-start
+  z-[100] 
+  px-[50px];
+}
+.navbar li {
+  @apply text-lg
+  text-[black] 
+  font-medium 
+  no-underline 
+  relative 
+  ml-10 
+  before:content-[''] 
+  before:absolute 
+  before:w-0 
+  before:h-0.5 
+  before:bg-[#86654B] 
+  before:transition-[0.3s] 
+  before:left-0 
+  before:top-full 
+  hover:before:w-full;
+}
+
+/*-------------------- ADOPT----------------------*/
+
+/* --------- Adopt CARD -------------- */
+.MDtitulo {
+  @apply text-center 
+  grid 
+  gap-2.5 
+  text-[#31241E] 
+  pt-[90px];
+  inline-size: min(100% - 4rem, 50rem);
+  margin-inline: auto;
+}
+
+.MDtitulo > h2 {
+  @apply font-bold text-lg;
+}
+
+/* ----------- Adopt BUTTOM ------------*/
+button {
+  @apply bg-[#D1C8C1] 
+  text-[medium];
+}
+
+/* --------- Adopt SCROLLER -----------*/
+.img-resize {
+  @apply h-[250px] 
+  w-[300px] 
+  object-cover 
+  object-[center_center];
+}
+.scroller {
+  @apply grid 
+  gap-2.5 
+  grid-flow-col 
+  auto-cols-[25%] 
+  overflow-x-auto 
+  pl-5 
+  pr-2.5 
+  pt-10 pb-[15px];
+  overscroll-behavior-inline: contain;
+}
+.media-elem {
+  @apply grid 
+  h-[450px] 
+  w-[340px] 
+  p-5 
+  rounded-[25px];
+  background: #ffffff;
+}
+.media-elem img {
+  @apply rounded-[25px]
+}
+.snaps-inline {
+  scroll-snap-type: inline mandatory;
+  scroll-padding-inline: 15px;
+}
+.snaps-inline > * {
+  @apply snap-start;
+}
+
+
+/*--------------- INNER ADOPTION ------------------*/
+
+.frame-In {
+  @apply inline-flex;
+}
+.img-In {
+  @apply pl-[200px] pt-[100px];
+}
+.text-In {
+  @apply max-w-[900px] pl-[100px] pt-[100px];
+}
+.text-In > ul {
+  @apply pl-[15px];
+}
+.text-In > ul > li {
+  @apply my-2.5;
+}
+
+/* ------ Boton -------*/
+.img-In-btn {
+  @apply absolute mt-5;
+}
+
+.img-In-pic > img {
+  @apply rounded-[25px];
+}
+
+.img-In-btn > button {
+  @apply w-[300px] h-[100px] text-[x-large] rounded-[25px];
+}
+
+/*-------------- REGISTER -------------------*/ 
+
+/*------------ Register FRAME-----------*/
+
+.CT-center {
+  @apply items-center justify-center h-screen pt-20 pl-[500px];
+}
+
+.reg-frame{
+  @apply bg-[#ffffff] max-w-[450px] p-10 rounded-md; 
+}
+
+.reg-cred {
+
+}
+
+.reg-error{
+  @apply text-red-600 font-bold text-[small] px-4;
+}
+
+.reg-form > div > input {
+  @apply w-full h-9 bg-[#D1C8C1] text-[#31241E] px-4 rounded-md m-3;
+}
+
+.reg-form > div > p {
+  @apply text-red-600 font-bold text-[small] px-4;
+}
+
+/*---------- LOGIN --------------*/
+
+.log-form > input {
+  @apply w-full h-9 bg-[#D1C8C1] text-[#31241E] px-4 rounded-md m-3;
+}
+
+.r-l-sign{
+  @apply flex gap-x-2 justify-between pt-5;
+}
+
+.r-l-submit button {
+  @apply rounded-md w-32 h-10;
+}
+
+/*-------------INSERT PET------------*/
+
+.pet-form > input {
+  @apply w-full h-9 bg-[#D1C8C1] text-[#31241E] px-4 rounded-md m-3;
+}
+
+.pet-form > textarea {
+  @apply w-full h-9 bg-[#D1C8C1] text-[#31241E] px-4 rounded-md m-3;
+}
+
+/*-----------------------------------------------------*/
+
+
+/*-------------CONTACT US------------*/
+
+
+.contact-title {
+  @apply text-[70px] font-[bold] text-left;
+}
+
+.form-general {
+  flex-direction: column;
+  @apply flex flex-col bg-[#D1C8C1] md:flex-row md:space-x-6 space-y-6 md:space-y-0 w-full max-w-4xl p-8 rounded-xl shadow-lg text-black
+  
+}
+
+.contact-general {
+  @apply flex justify-center mt-11 p-11   
+}
+
+.form-general-1 {
+  @apply flex flex-col space-y-8 justify-between
+}
+
+.form-container { 
+  @apply rounded-xl shadow-lg p-8
+}
+.form-container-1 {
+  @apply flex flex-col space-y-4
+}
+
+.form-placeholder { 
+  @apply ring-1 ring-gray-300 w-full rounded-md px-4 py-2 outline-none focus:ring-2 focus:ring-orange-300
+}
+
+.form-send-button {
+  @apply inline-block self-end bg-[#ffffff] text-black font-bold rounded-lg px-6 py-2 uppercase text-sm
+}
+
+.contact-container-1 {
+  @apply flex items-start
+}
+
+.contact-container-2 { 
+  @apply flex flex-col space-y-8
+}
+
+.contact-item{
+  @apply flex flex-col items-start 
+}
+
+.contact-item-title { 
+  @apply flex flex-col items-start  font-extrabold 
+}
+
+
+/*-------------ABOUT US------------*/
+
+.about-us-container {
+  @apply text-[large] mt-[30px];
+}
+
+.about-us-section {
+  @apply rounded-2xl mb-10 shadow-2xl text-xl bg-[#F6F4F3] p-[15px] m-5;
+}
+
+.about-us-section:hover {
+  @apply rounded-2xl mb-10 shadow-2xl text-3xl bg-[#f3d79edc] transition-all duration-[0.3s] ease-[ease] p-[5px];
+}
+  
+.about-title {
+  @apply text-3xl text-center m-5;
+}
+
+.about-title span {
+  @apply text-[90px] italic font-semibold -mt-28;
+}
+
+.about-title2 {
+  @apply text-3xl text-center m-5;
+}
+
+.about-title2 span {
+  @apply text-[70px] italic font-semibold m-5;
+}
+
+.about-us-section p {
+  @apply p-2.5 m-5;
+}
+
+.goal-list {
+  @apply list-disc ml-5;
+}
+
+.about-us-section2 p {
+  @apply text-center text-xl m-5;
+}
+
+/* ------------PROFILE-------------- */
+
+.form > ul > li {
+  @apply m-5;
+}
+
