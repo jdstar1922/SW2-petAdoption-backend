@@ -1,13 +1,9 @@
-import InnerAdopt from "./InnerAdopt";
-import Images from "../img/Images";
 import { usePets } from "../context/PetContext";
 import { useEffect } from "react";
 import PetCard from "../components/PetCard";
-import { useNavigate } from "react-router-dom";
 
 function Adopt (){
-  const navigate = useNavigate();
-  const { getPets, pets} = usePets();
+  const { getPets, pets } = usePets();
   useEffect(() => {
     getPets();
   }, [])

@@ -36,7 +36,7 @@ function App (){
             <Route path="/register" element={<Register />}></Route>
             <Route path="/about" element={<About />}></Route>
             <Route path="/adopt" element={<Adopt />}></Route>
-            <Route path="/inneradopt" element={<InnerAdopt />}></Route>
+            <Route path="/inneradopt/:id" element={<InnerAdopt />}></Route>
             <Route path="/contact" element={<Contact />}></Route>
 
             <Route path="/cart" element={<Cart />}></Route>
